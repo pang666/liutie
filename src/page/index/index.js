@@ -1,6 +1,3 @@
-var cats = require('./cats.js');
-var common = require('../common.js');
+'use strict'
 require('./index.css');
-common();
-console.log(cats);
-$('body').html("羊驼不是草拟吗")
+$('body').html("羊驼不是草拟吗sfsfsdfdsfdsf2223333")
