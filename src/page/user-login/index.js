@@ -1,2 +1,2 @@
 'use strict'
-console.log("羊驼就是草拟吗");
+console.log("羊驼就是草泥马!");
