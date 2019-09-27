@@ -2,8 +2,13 @@
 require('./index.js');
 require('@/common/nav-simple/index.js');
 require('@/common/nav/index.js');
+require('@/common/header/index.js');
 
 var _mm = require('util/mm.js');
+var navSide = require('@/common/nav-side/index.js');
+navSide.init({
+    name:'user-center'
+})
 
 /*_mm.request({
 	//url: './xx.do', //错误接口❌

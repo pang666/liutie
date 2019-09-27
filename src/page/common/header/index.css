@@ -1,0 +1,29 @@
+.header .logo{
+	/*绝对定位的特征：不占文档流；相对定位的特征：占文档流*/
+	position: absolute;
+	left: 60px;
+	top: 34px;
+	/*显示成块级元素：独占一行*/
+	display: block;
+	font-size:36px;
+	color: #c60023;
+	font-weight: bold;
+	text-decoration: none;
+}
+.header .search-con{
+	padding: 40px 0 30px 250px;/*上右下左*/
+}
+.header .search-con .search-input{
+	width: 550PX;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 15px;
+	border:  2px solid #c60023;
+	outline: none;
+}
+.header .search-con .search-btn{
+	position: absolute;
+	height: 44px;
+	width: 80px;
+}
