@@ -6,9 +6,15 @@ require('@/common/header/index.js');
 
 var _mm = require('util/mm.js');
 var navSide = require('@/common/nav-side/index.js');
-navSide.init({
-    name:'user-center'
-})
+// navSide.init({
+//     name:'user-center'
+// })
+// navSide.init({
+//     name:'user-pass-update'
+// })
+// navSide.init({
+//     name:'order-list'
+// })
 
 /*_mm.request({
 	//url: './xx.do', //错误接口❌

@@ -72,7 +72,7 @@ var _mm = {
 		//比如：密码提示的问题不能为空
 		var value = $.trim(value);
 		if('require' === type){
-			//将value值强转成Boolean类型的数据
+		//将value值强转成Boolean类型的数据
 			return !!value;
 		}
 		//手机号验证
@@ -81,7 +81,7 @@ var _mm = {
 		}
 		//邮箱格式验证
 		if('email' === type){
-
+			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
 		}
 	},
 	goHome: function(){

@@ -27,8 +27,10 @@ var nav = {
 		//点击退出按钮（需要请求后端）
 		$('.js-logout').click(function(){
 			_user.logout(function(res){
+				//刷新页面
 				window.location.reload();
 			},function(errMsg){
+				//错误提示
 				_mm.errorTips(errMsg);
 			})
 		})
@@ -37,7 +39,7 @@ var nav = {
 	loadUserInfo:function(){
 		_user.checkLogin(function(res){
 			$('.user.not-login').hide().siblings('.user.login').show()
-			.find('.username').text('res.username')
+			.find('.username').text(res.username)
 		},function(errMsg){
 			//do nothing！
 		});
