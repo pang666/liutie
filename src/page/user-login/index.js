@@ -49,7 +49,6 @@ var page = {
 		if (validateResult.status) {
 			console.log(validateResult.status)
 			_user.login(formData, function(res){
-				alert('成功了')
 				window.location.href = decodeURIComponent(_mm.getUrlParam('redirect')) || './index.html'
 			},function(errMsg){
 				formError.show(errMsg);
@@ -79,4 +78,6 @@ var page = {
 };
 $(function(){
 	page.init();
+		$('.title').html('<%= htmlWebpackPlugin.options.title %>');
+		console.log('333')
 })

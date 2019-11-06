@@ -4,8 +4,10 @@
   "description": "柳铁职院-粤嵌之行-H5实训项目",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "dist": "set WEBPACK_ENV=online && webpack -p"
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dev_win": "set WEBPACk_ENV=dev && webpack-dev-server --inline --port 8088",
+    "dist": "WEBPACk_ENV=online webpack -d",
+    "dist_win": "set WEBPACk_ENV=online && webpack -d"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,10 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.0",
-    "url-loader": "^2.1.0",
+    "url-loader": "^2.2.0",
     "webpack": "^4.0.0",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",

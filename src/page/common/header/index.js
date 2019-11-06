@@ -41,7 +41,7 @@ var header = {
 	//实现搜索提交的方法
 	searchSubmit:function(){
 		//对关键字去空白字符处理
-		var keyword = $.trim($('#search-btn').val());
+		var keyword = $.trim($('#search-input').val());
 		//如果提交的搜索时候有keyword，跳转到list页
 		if (keyword) {
 			window.location.href = './list.html?keyword=' + keyword;

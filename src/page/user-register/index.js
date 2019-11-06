@@ -27,6 +27,8 @@ var page = {
 		$('#username').blur(function(){
 			var username = $.trim($(this).val());
 			if (!username) {
+				//当用户名为空提示信息隐藏
+				formError.hide();
 				return
 			}
 			_user.checkUsername(username, function(res){
@@ -61,10 +63,10 @@ var page = {
 		//表单验证结果
 		var validateResult = this.formValidate(formData);
 		//如果验证成功
+		console.log(validateResult)
 		if (validateResult.status) {
 			console.log('表单验证成功')
-			_user.login(formData, function(){
-				alert('成功了')
+			_user.register(formData, function(){
 				window.location.href = './user-result.html?type=register';
 			},function(errMsg){
 				formError.show(errMsg);

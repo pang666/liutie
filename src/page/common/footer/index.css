@@ -1,6 +1,9 @@
 .footer{
 	padding-bottom: 10px;
-
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }
 .footer .links{
 	text-align: center;

@@ -1,38 +1,29 @@
 'use strict'
-require('./index.js');
-require('@/common/nav-simple/index.js');
+require('./index.css');
 require('@/common/nav/index.js');
 require('@/common/header/index.js');
-
 var _mm = require('util/mm.js');
-var navSide = require('@/common/nav-side/index.js');
-// navSide.init({
-//     name:'user-center'
-// })
-// navSide.init({
-//     name:'user-pass-update'
-// })
-// navSide.init({
-//     name:'order-list'
-// })
 
-/*_mm.request({
-	//url: './xx.do', //错误接口❌
-	url: '/product/list.do?keyword=1',
-	success: function(res){
-		console.log("这是我们从网络接口中获取的数据：", res);
-	},
-	error: function(errMsg){
-		console.log(errMsg);
-	}
-});*/
+require('util/swiper/swiper-3.3.1.min.css');
+require('util/swiper/swiper-3.3.1.min.js');
 
-// console.log(_mm.getUrlParam('test'));
+var templateBanner = require('./banner.string');
 
-// 提供模板
-// var html = '<div>{{ data }}</div>';
-// 提供数据
-// var data = {
-// 	data: 123
-// }
-// console.log(_mm.renderHtml(html, data));
+var bannerHtml = _mm.renderHtml(templateBanner);
+$('.banner-con').html(bannerHtml);
+
+
+var mySwiper = new Swiper('.swiper-container', {
+    autoplay: 2000, // 可选选项，自动滑动   2000ms
+    // 手动滑动之后，依然可以自动轮播
+    autoplayDisableOnInteraction: false,
+    // 分页器
+    pagination: '.swiper-pagination',
+    // 环路(不影响自动轮播)
+    loop: true,
+    navigation:{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+    }
+
+});
